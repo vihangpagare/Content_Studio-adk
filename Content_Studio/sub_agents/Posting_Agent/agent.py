@@ -63,10 +63,10 @@ def _tweet(
 ) -> Dict[str, Any]:
     
     cfg = {
-        "api_key": 'JY70YvdvsLZ9gvwin861qlQWH',
-        "api_secret_key": "tNLMMn5l0W1mf5glIWu4BewhctGbZc5iGCgWURmVHEQPPr6JvE",
-        "access_token": "1697332135898877952-FiiNUkKVKtUPr1wpXEDJ1Iaiv17VGs",
-        "access_token_secret": "EAbgB8pEMqYuoR52HnfCo6LABHNvLUD7AdbLhSGdKj8on",
+        "api_key": 'your-api-key',
+        "api_secret_key": "your-api-secret",
+        "access_token": "your-access-token",
+        "access_token_secret": "your-access-token-secret",
     }
     if any(v is None for v in cfg.values()):
         raise TwitterError("Missing Twitter creds in env-vars", "config_error")
@@ -262,8 +262,8 @@ async def post_thread(tool_context: ToolContext) -> Dict[str, Any]:
     
 
 
-LINKEDIN_ACCESS_TOKEN = 'AQXTGoBLWcc43sMp2-g85GEbFSBCRLFNx7h2ZxJyDgN3ii_ik8Re8qMUrR7cbxftucVAGISFm5BPsMBI9iYoAirjt1wI91m53IeNsbEMIKKBn5tvRjnM6x1c5LfFAOV7YraI0cLvNhKiyZYU0-qkZIkjPk61NvLlcc7uOiBJAOd7w6Uba1YAVKw4I9_CwAT3ZjumUwPxAtuFq5NwGBVyI5KwCacoAwnEHxlNcR87AXs2j3tHDgd5n78wg-40NnJel2J5hM8LsGCVNfRrVUknBLaBp4wABUP6n1gWocXOjiXyKW5VCZgt1KD-CJvK1hNy_syD06s4eoXpiMenEuUnj6_iLrmpMg' # put in env
-LINKEDIN_AUTHOR_URN   = "urn:li:person:4UPDA8Ukrx"   # e.g. "urn:li:person:abcd…"
+LINKEDIN_ACCESS_TOKEN = 'your-access-token' # put in env
+LINKEDIN_AUTHOR_URN   = "your-author-urn"   # e.g. "urn:li:person:abcd…"
 
 
 def _upload_asset(image_bytes: bytes) -> str:
