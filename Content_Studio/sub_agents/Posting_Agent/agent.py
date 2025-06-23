@@ -63,10 +63,10 @@ def _tweet(
 ) -> Dict[str, Any]:
     
     cfg = {
-        "api_key": 'your-api-key',
-        "api_secret_key": "your-api-secret",
-        "access_token": "your-access-token",
-        "access_token_secret": "your-access-token-secret",
+        "api_key": os.getenv("tw_api_key"),
+        "api_secret_key": os.getenv("tw_api_secret_key"),
+        "access_token": os.getenv("tw_access_token"),
+        "access_token_secret": os.getenv("tw_access_token_secret"),
     }
     if any(v is None for v in cfg.values()):
         raise TwitterError("Missing Twitter creds in env-vars", "config_error")
@@ -262,8 +262,8 @@ async def post_thread(tool_context: ToolContext) -> Dict[str, Any]:
     
 
 
-LINKEDIN_ACCESS_TOKEN = 'your-access-token' # put in env
-LINKEDIN_AUTHOR_URN   = "your-author-urn"   # e.g. "urn:li:person:abcd…"
+LINKEDIN_ACCESS_TOKEN = os.getenv("Linkedin_access_token") # put in env
+LINKEDIN_AUTHOR_URN   = os.getenv("Linkedin_person_urn") # e.g. "urn:li:person:abcd…"
 
 
 def _upload_asset(image_bytes: bytes) -> str:
