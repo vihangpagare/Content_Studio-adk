@@ -14,7 +14,7 @@ from google.adk.tools import google_search
 from langchain_google_genai import ChatGoogleGenerativeAI
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
-    google_api_key="AIzaSyDESOxZI59FnrmzhElQ7BCmBzqTwM0F-V8"  # or set as env var
+    google_api_key=os.getenv("GOOGLE_API_KEY")  # or set as env var
 )
 
 # Enhanced Company Profile Schema
